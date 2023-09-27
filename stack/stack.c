@@ -15,6 +15,7 @@ int isFull(stack *stack){
     }
     else 
     return 0;
+    
 }
 
 
