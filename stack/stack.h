@@ -16,4 +16,4 @@ void push(stack *stack, int data);
 
 void printStack(stack *stack);
 
-#endif
+#endif.
