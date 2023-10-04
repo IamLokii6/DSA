@@ -5,10 +5,15 @@
 struct stack
 {
     int top;
-    char items[SIZE];
+    int items[SIZE];
 };
 typedef struct stack stack;
 
-stack* createStack();
+stack *createStack();
 int isFull(stack *stack);
-int isEmpty(stack *stack);
+
+void push(stack *stack, int data);
+
+void printStack(stack *stack);
+
+#endif
