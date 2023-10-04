@@ -41,3 +41,4 @@ void printStack(stack *stack)
         printf("%d\n", stack->items[i]);
     }
 }
+ll
