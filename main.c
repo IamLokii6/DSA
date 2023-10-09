@@ -19,7 +19,7 @@ int main()
             int element;
             do
             {
-                printf("1)Push \n4)Print stack \n5)Exit to exit\n");
+                printf("1)Push \n2)Pop \n3)Peek \n4)Print stack \n5)Exit to exit\n");
                 scanf("%d", &option);
                 switch (option)
                 {
@@ -32,11 +32,30 @@ int main()
                     break;
                 }
 
+                 case 2:
+                {
+                    int data = pop(s);
+                    if (data)
+                    {
+                        printf("The poped element is:%d\n", data);
+                    }
+                    break;
+                }
+                case 3:
+                {
+                    printf("The element at stack top:%c\n", peek(s));
+                    break;
+                }
+
                 case 4:
                 {
                     printStack(s);
                     break;
                 }
+
+                case 5:
+                    break;
+
                 default:
                     printf("Invalid input\n");
                 }
