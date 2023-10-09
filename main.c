@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <conio.h>
 #include "./stack/stack.h"
-#include "./i2p/infix_to_postfix.h"
+#include "./infix_to_postfix/infixtopostfix.h"
+#include "./postfix_eval/postfix.h"
+#include "./bracket_matching/bracket.h"
 
 int main()
 {
@@ -10,7 +12,7 @@ int main()
     int size;
     while (1)
     {
-        printf("\nEnter:\n1)Stack \n2)Infix to Postix Conversion \n");
+        printf("Enter:\n1)Stack \n2)Infix to Postfix ");
         scanf("%d", &option);
         switch (option)
         {
@@ -32,6 +34,7 @@ int main()
                     push(s, element);
                     break;
                 }
+
                 case 2:
                 {
                     int data = pop(s);
@@ -46,13 +49,16 @@ int main()
                     printf("The element at stack top:%c\n", peek(s));
                     break;
                 }
+
                 case 4:
                 {
                     printStack(s);
                     break;
                 }
+
                 case 5:
                     break;
+
                 default:
                     printf("Invalid input\n");
                 }
@@ -61,13 +67,25 @@ int main()
         }
         case 2:
         {
-            char infixExpression[50];
+            char infixExp[50];
             printf("Enter the infix expression:");
-            scanf("%s", infixExpression);
-            char *postfixExpression = infixToPostfix(infixExpression);
-            printf("%s", postfixExpression);
-            break;
+            scanf("%s", infixExp);
         }
+        case 3:
+        {
+            char postfix[50];
+            printf("Enter the postfix expression:");
+            scanf("%s", postfix);
         }
-    }    
-}    
+        case 4:
+        {
+            char exp[50];
+            printf("Enter the expression:");
+            scanf("%s", exp);
+        }
+        default:
+            printf("Exiting the program");
+            exit(0);
+        }
+    }
+}
