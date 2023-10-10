@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/vijay/gitdsa",
-      "program": "c:/Users/vijay/gitdsa/build/Debug/outDebug",
+      "cwd": "c:/Users/vijay/newdsa",
+      "program": "c:/Users/vijay/newdsa/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
